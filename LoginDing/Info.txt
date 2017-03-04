@@ -1,0 +1,3 @@
+﻿Ich weiß, ich weiß, es ist alles sehr ungeordnet und auch nicht nach MVC geschrieben worden. Doch hier war mein einziges Zeil mir selbst zu Beweisen dass ich es hinbekomme. 
+Hier muss noch einiges an Arbeit investiert werden um es schön und ordentlich zu machen und das werde ich die nächsten Tage auch angehen.
+Mit dem ganzen Model, View und Controller habe ich momentan ehrlich gesagt noch Probleme. Dort ist es auf jeden Fall nötig zu Üben.

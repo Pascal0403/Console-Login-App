@@ -15,7 +15,7 @@ namespace LoginDing
             DatenAbfrage.RegLog();         
         }
 
-        private static void Initialisieren()
+        private static void Initialisieren() // Erstellen eines Orderns und 2 .txt Datein zum speichern der Daten
         {
             string Benutzername = Environment.UserName;
             if (!Directory.Exists(@"C:\Users\" + Benutzername + @"\Documents\PascalProgramm"))

@@ -8,19 +8,19 @@ namespace LoginDing
 {
     class DatenAbfrage
     {
-        public static void RegLog()
+        public static void RegLog() // Abfrage ob man sich einloggen oder regestrieren möchte
         {
             Console.WriteLine("Wollen sie sich einloggen oder regestrieren? (Reg/Log)");
             string JaNein = Console.ReadLine();
             string UpperString = JaNein.ToUpper();
-            if (UpperString == "LOG")
+            if (UpperString == "LOG") // Login
             {
                 Console.WriteLine("Geben sie nun ihr Benutzernamen ein");
-                string Benutzername = LoginName();
-                bool JaNein2 = EingabeValidPasswort(Benutzername);
+                string Benutzername = LoginName(); // TODO: Methode LoginName() eigentlich unnötig, alternative: "" = Console.Readline()
+                bool JaNein2 = EingabeValid(Benutzername);
                 Console.WriteLine("Geben sie nun ihr Passwort ein");
-                string Passwort = LoginPasswort();
-                bool JaNein3 = EingabeValidPasswort(Passwort);
+                string Passwort = LoginPasswort(); // TODO: Methode LoginPasswort() eigentlich unnötig, alternative: "" = Console.Readline()
+                bool JaNein3 = EingabeValid(Passwort); 
                 if (JaNein2 && JaNein3)
                 {
                     Login.Log(Benutzername, Passwort);
@@ -32,14 +32,14 @@ namespace LoginDing
                 }
 
             }
-            else if (UpperString == "REG")
+            else if (UpperString == "REG") // Regestrieren
             {
                 Console.WriteLine("Geben sie nun ihren gewünschten Benutzernamen ein");
                 string Benutzername = RegName();
-                bool JaNein2 = EingabeValidPasswort(Benutzername);
+                bool JaNein2 = EingabeValid(Benutzername);
                 Console.WriteLine("Geben sie nun ihr gewünschtes Passwort ein");
                 string Passwort = RegPasswort();
-                bool JaNein3 = EingabeValidPasswort(Passwort);
+                bool JaNein3 = EingabeValid(Passwort);
                 if (JaNein2 && JaNein3)
                 {
                     Reg.Register(Benutzername, Passwort);                    
@@ -57,7 +57,7 @@ namespace LoginDing
             }
         }
 
-        private static bool EingabeValidPasswort(string Passwort)
+        private static bool EingabeValid(string Passwort) // Check ob Eingabe ist korrekt (Mindestens 1 Zeiche)
         {
             bool JaNein = false;
             if (Passwort == "")
@@ -72,48 +72,35 @@ namespace LoginDing
             return JaNein;
         }
 
-        private static bool EingabeValidName(string Benutzername)
-        {
-            bool JaNein = false;
-            if (Benutzername == "")
-            {
-                JaNein = false;
-            }
-            else
-            {
-                JaNein = true;
-            }
 
-            return JaNein;
-        }
-
-        private static string LoginName()
+        private static string LoginName() // Abfrage Name
         {
             string BenutzerEingabe;            
             BenutzerEingabe = Console.ReadLine();
             return BenutzerEingabe;
         }
-
-        private static string LoginPasswort()
+         
+        private static string LoginPasswort() // Abfrage Passwort
         {
             string BenutzerEingabe;
             BenutzerEingabe = Console.ReadLine();
             return BenutzerEingabe;
         }
 
-        private static string RegName()
+        private static string RegName() // Abfrage Name
         {
             string RegDaten;
             RegDaten = Console.ReadLine();
             return RegDaten;
         }
 
-        private static string RegPasswort()
+        private static string RegPasswort() // Abfrage Passwort
         {
             string RegDaten;
             RegDaten = Console.ReadLine();
             return RegDaten;
         }
+        // TODO: letzten 4 Methoden überflüssig.
 
     }
 }

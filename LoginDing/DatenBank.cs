@@ -13,7 +13,7 @@ namespace LoginDing
         {
             string SystemBenutzer = Environment.UserName;
             string SaveDaten = Benutzername + Passwort + Environment.NewLine;
-            string path = @"C:\Users\" + SystemBenutzer + @"\Documents\PascalProgramm\Daten.txt"; // Daten
+            string path = @"C:\Users\" + SystemBenutzer + @"\Documents\PascalProgramm\Daten.txt"; 
             bool JaNein = BenutzernameVerify(Benutzername);
             if (JaNein)
             {
@@ -32,7 +32,7 @@ namespace LoginDing
             string SystemBenutzer = Environment.UserName;
             bool JaNein = false;
             string SaveBenutzername = Benutzername + Environment.NewLine;
-            string path = @"C:\Users\" + SystemBenutzer + @"\Documents\PascalProgramm\NamenDaten.txt"; // Namen
+            string path = @"C:\Users\" + SystemBenutzer + @"\Documents\PascalProgramm\NamenDaten.txt"; 
             foreach (string line in File.ReadLines(path))
             {
                 if (line.Contains(Benutzername))
@@ -49,7 +49,7 @@ namespace LoginDing
         public static bool Verify(string Benutzername, string Passwort) // Login Daten Überprüfen ob richtig
         {
             string SystemBenutzer = Environment.UserName;
-            string path = @"C:\Users\" + SystemBenutzer + @"\Documents\PascalProgramm\Daten.txt"; // daten.Txt
+            string path = @"C:\Users\" + SystemBenutzer + @"\Documents\PascalProgramm\Daten.txt"; 
             string Benutzerdaten = Benutzername + Passwort;
             bool JaNein = false;
             foreach (string line in File.ReadLines(path))

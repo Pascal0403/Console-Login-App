@@ -8,7 +8,7 @@ namespace LoginDing
 {
     class Login
     {
-        public static void Log(string Benutzername, string Passwort)
+        public static void Log(string Benutzername, string Passwort) 
         {
             bool JaNein = DatenBank.Verify(Benutzername, Passwort);
             if (JaNein)
@@ -24,3 +24,4 @@ namespace LoginDing
         }
     }
 }
+// TODO: Methode nicht nötig

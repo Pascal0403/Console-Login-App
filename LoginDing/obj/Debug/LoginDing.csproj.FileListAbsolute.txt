@@ -1,0 +1,12 @@
+C:\Users\Pascal\Desktop\C# kurs\Code\LoginDing\LoginDing\bin\Debug\LoginDing.exe.config
+C:\Users\Pascal\Desktop\C# kurs\Code\LoginDing\LoginDing\bin\Debug\LoginDing.exe
+C:\Users\Pascal\Desktop\C# kurs\Code\LoginDing\LoginDing\bin\Debug\LoginDing.pdb
+C:\Users\Pascal\Desktop\C# kurs\Code\LoginDing\LoginDing\obj\Debug\LoginDing.csprojResolveAssemblyReference.cache
+C:\Users\Pascal\Desktop\C# kurs\Code\LoginDing\LoginDing\obj\Debug\LoginDing.exe
+C:\Users\Pascal\Desktop\C# kurs\Code\LoginDing\LoginDing\obj\Debug\LoginDing.pdb
+C:\Users\Pascal\Source\Repos\Console-Login-System\LoginDing\bin\Debug\LoginDing.exe.config
+C:\Users\Pascal\Source\Repos\Console-Login-System\LoginDing\obj\Debug\LoginDing.exe
+C:\Users\Pascal\Source\Repos\Console-Login-System\LoginDing\obj\Debug\LoginDing.pdb
+C:\Users\Pascal\Source\Repos\Console-Login-System\LoginDing\bin\Debug\LoginDing.exe
+C:\Users\Pascal\Source\Repos\Console-Login-System\LoginDing\bin\Debug\LoginDing.pdb
+C:\Users\Pascal\Source\Repos\Console-Login-System\LoginDing\obj\Debug\LoginDing.csprojResolveAssemblyReference.cache

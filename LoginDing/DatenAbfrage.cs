@@ -11,16 +11,20 @@ namespace LoginDing
         public static void RegLog() // Abfrage ob man sich einloggen oder regestrieren möchte
         {
             Console.WriteLine("Wollen sie sich einloggen oder regestrieren? (Reg/Log)");
-            string JaNein = Console.ReadLine();
-            string UpperString = JaNein.ToUpper();
+            string RegorLog = Console.ReadLine();
+            string UpperString = RegorLog.ToUpper();
+
             if (UpperString == "LOG") // Login
             {
                 Console.WriteLine("Geben sie nun ihr Benutzernamen ein");
-                string Benutzername = LoginName(); // TODO: Methode LoginName() eigentlich unnötig, alternative: "" = Console.Readline()
+                string Benutzername = Console.ReadLine();
                 bool JaNein2 = EingabeValid(Benutzername);
+
                 Console.WriteLine("Geben sie nun ihr Passwort ein");
-                string Passwort = LoginPasswort(); // TODO: Methode LoginPasswort() eigentlich unnötig, alternative: "" = Console.Readline()
-                bool JaNein3 = EingabeValid(Passwort); 
+                string Passwort = Console.ReadLine(); ;
+
+                bool JaNein3 = EingabeValid(Passwort);
+
                 if (JaNein2 && JaNein3)
                 {
                     Login.Log(Benutzername, Passwort);
@@ -32,13 +36,14 @@ namespace LoginDing
                 }
 
             }
+
             else if (UpperString == "REG") // Regestrieren
             {
                 Console.WriteLine("Geben sie nun ihren gewünschten Benutzernamen ein");
-                string Benutzername = RegName();
+                string Benutzername = Console.ReadLine();
                 bool JaNein2 = EingabeValid(Benutzername);
                 Console.WriteLine("Geben sie nun ihr gewünschtes Passwort ein");
-                string Passwort = RegPasswort();
+                string Passwort = Console.ReadLine();
                 bool JaNein3 = EingabeValid(Passwort);
                 if (JaNein2 && JaNein3)
                 {
@@ -71,36 +76,6 @@ namespace LoginDing
 
             return JaNein;
         }
-
-
-        private static string LoginName() // Abfrage Name
-        {
-            string BenutzerEingabe;            
-            BenutzerEingabe = Console.ReadLine();
-            return BenutzerEingabe;
-        }
-         
-        private static string LoginPasswort() // Abfrage Passwort
-        {
-            string BenutzerEingabe;
-            BenutzerEingabe = Console.ReadLine();
-            return BenutzerEingabe;
-        }
-
-        private static string RegName() // Abfrage Name
-        {
-            string RegDaten;
-            RegDaten = Console.ReadLine();
-            return RegDaten;
-        }
-
-        private static string RegPasswort() // Abfrage Passwort
-        {
-            string RegDaten;
-            RegDaten = Console.ReadLine();
-            return RegDaten;
-        }
-        // TODO: letzten 4 Methoden überflüssig.
 
     }
 }
